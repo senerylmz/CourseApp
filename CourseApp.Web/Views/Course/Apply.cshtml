@@ -1,9 +1,24 @@
 ﻿@model Student
 
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
 @{
 }
 
-form gelecek
+<form method="post" asp-action="apply">
+    <label asp-for="Name">Name:</label><br>
+    <input type="text" asp-for="Name"><br>
+
+    <label asp-for="Mail">Mail:</label><br>
+    <input type="text" asp-for="Mail"><br>
+
+    <label asp-for="Phone">Phone:</label><br>
+    <input type="text" asp-for="Phone"><br>
+
+    <label asp-for="WillAttend">WillAttend:</label><br>
+    <select asp-for="WillAttend">
+        <option value="">Select and Option</option>
+        <option value="true">Yes, i will attend</option>
+        <option value="false">No,</option>
+    </select><br>
+
+    <button type="submit">Submit</button>
+</form>
