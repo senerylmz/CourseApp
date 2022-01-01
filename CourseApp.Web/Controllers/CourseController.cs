@@ -19,5 +19,9 @@ namespace CourseApp.Web.Controllers
             return View();
         }
 
+        public ViewResult Apply()
+        {
+            return View();
+        }
     }
 }
