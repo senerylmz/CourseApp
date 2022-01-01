@@ -27,7 +27,8 @@ namespace CourseApp.Web.Controllers
         [HttpPost]
         public ViewResult Apply(Student student)
         {// model binding
-            return View();
+            Repostory.AddStudent(student);
+            return View("Thanks",student);
         }
     }
 }

@@ -1,0 +1,14 @@
+﻿@model Student
+@{
+}
+
+<h2>@Model.Name</h2>
+<hr/>
+@if (Model.WillAttend == true)
+{
+    @:Kursa Katılmış olduğundan dolayı çok mutlu olduk.
+}
+else
+{
+    @:Kursa katılmadığından dolayı üzüldük
+}
