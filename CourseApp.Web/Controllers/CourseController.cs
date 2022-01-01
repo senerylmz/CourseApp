@@ -17,7 +17,8 @@ namespace CourseApp.Web.Controllers
         }
         public ViewResult List()
         {
-            return View();
+            var liste = Repostory.Students.Where(i => i.WillAttend == true);
+            return View(liste);
         }
         [HttpGet]
         public ViewResult Apply()
