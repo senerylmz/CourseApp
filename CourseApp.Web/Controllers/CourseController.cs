@@ -28,8 +28,16 @@ namespace CourseApp.Web.Controllers
         [HttpPost]
         public ViewResult Apply(Student student)
         {// model binding
-            Repostory.AddStudent(student);
-            return View("Thanks",student);
+            if (ModelState.IsValid)
+            {
+                Repostory.AddStudent(student);
+                return View("Thanks", student);
+            }
+            else
+            {
+                return View();
+            }
+            
         }
     }
 }
