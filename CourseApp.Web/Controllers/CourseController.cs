@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CourseApp.Web.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +19,14 @@ namespace CourseApp.Web.Controllers
         {
             return View();
         }
-
+        [HttpGet]
         public ViewResult Apply()
         {
+            return View();
+        }
+        [HttpPost]
+        public ViewResult Apply(Student student)
+        {// model binding
             return View();
         }
     }
