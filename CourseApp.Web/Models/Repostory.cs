@@ -21,5 +21,6 @@ namespace CourseApp.Web.Models
         {
             students.Add(student);
         }
+
     }
 }
